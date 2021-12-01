@@ -206,17 +206,14 @@ int FiltroMinotauro(void* libro)
 {
 	int idLibro;
 	int raux;
-	if(libro != NULL)
+	getEditorial(libro, &idLibro);
+	if(idLibro == 4)
 	{
-		getEditorial(libro, &idLibro);
-		if(idLibro == 4)
-		{
-			raux = 1;
-		}
-		else
-		{
-			raux = 0;
-		}
+		raux = 1;
+	}
+	else
+	{
+		raux = 0;
 	}
 	return raux;
 }
@@ -225,58 +222,22 @@ void FuncionMapeo(void* libro)
 {
 	int idEditorial;
 	float precio;
-	if(libro != NULL)
+	getEditorial(libro, &idEditorial);
+	getPrecio(libro, &precio);
+	switch(idEditorial)
 	{
-		getEditorial(libro, &idEditorial);
-		getPrecio(libro, &precio);
-		switch(idEditorial)
+	case 1:
+		if(precio >= 300)
 		{
-		case 1:
-			if(precio >= 300)
-			{
-				precio = precio - (precio * 0.20);
-			}
-			break;
-		case 2:
-			if(precio <= 200)
-			{
-				precio = precio - (precio * 0.10);
-			}
-			break;
+			precio = precio - (precio * 0.20);
 		}
-		setPrecio(libro, precio);
-	}
-}
-
-int LibrosSobre500(void* libro)
-{
-	float precio;
-	int raux = 0;
-	if(libro != NULL)
-	{
-		getPrecio(libro, &precio);
-		if(precio > 500)
+		break;
+	case 2:
+		if(precio <= 200)
 		{
-			raux = 1;
+			precio = precio - (precio * 0.10);
 		}
+		break;
 	}
-	return raux;
-}
-
-int SumatoriaLibrosPearson(void* libro)
-{
-	float precio;
-	int idEditorial;
-	int raux;
-	raux = 0;
-	if(libro != NULL)
-	{
-		getPrecio(libro, &precio);
-		getEditorial(libro, &idEditorial);
-		if(idEditorial == 3)
-		{
-			raux = precio;
-		}
-	}
-	return raux;
+	setPrecio(libro, precio);
 }

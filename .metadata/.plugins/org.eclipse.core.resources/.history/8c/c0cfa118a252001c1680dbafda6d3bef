@@ -617,18 +617,3 @@ LinkedList* ll_map(LinkedList* this, void(*fn)(void* element))
 	return mappedList;
 }
 
-int ll_count(LinkedList* this, int(*fn)(void* element))
-{
-	int count;
-	void* aux;
-	int len;
-	int i;
-	len = ll_len(this);
-	count = 0;
-	for(i=0; i < len; i++)
-	{
-		aux = ll_get(this, i);
-		count = count + fn(aux);
-	}
-	return count;
-}

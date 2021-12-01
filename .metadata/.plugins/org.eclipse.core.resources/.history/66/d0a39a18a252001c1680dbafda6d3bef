@@ -34,23 +34,12 @@ int main(void) {
 				banderaEditoriales++;
 				break;
 			case 3:
-				if(banderaLibros != 0)
-				{
-					controller_3OrdenarLibrosPorAutor(listaLibros);
-				}
-				else
-				{
-					printf("\nCargar datos de libros primero.\n");
-				}
+				controller_3OrdenarLibrosPorAutor(listaLibros);
 				break;
 			case 4:
 				if(banderaLibros != 0 && banderaEditoriales != 0)
 				{
 					controller_4ImprimirLibros(listaLibros, listaEditoriales);
-				}
-				else
-				{
-					printf("\nCargar datos de libros y editoriales primero.\n");
 				}
 				break;
 			case 5:
@@ -58,43 +47,16 @@ int main(void) {
 				{
 					controller_5ListadoMinotauro(listaLibros);
 				}
-				else
-				{
-					printf("\nCargar datos de libros primero.\n");
-				}
 				break;
 			case 6:
 				if(banderaLibros != 0)
 				{
 					controller_6Mappeo(listaLibros);
 				}
-				else
-				{
-					printf("\nCargar datos de libros primero.\n");
-				}
-				break;
-			case 7:
-				if(banderaLibros != 0)
-				{
-					controller_7CuantosCuestan500mas(listaLibros);
-				}
-				else
-				{
-					printf("\nCargar datos de libros primero.\n");
-				}
-				break;
-			case 8:
-				if(banderaLibros != 0)
-				{
-					controller_8SumatoriaPrecioPearson(listaLibros);
-				}
-				else
-				{
-					printf("\nCargar datos de libros primero.\n");
-				}
 				break;
 		}
 		printf("\n");
 	}while(eleccion != 0);
+
 	return 0;
 }

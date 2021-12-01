@@ -16,7 +16,5 @@ int controller_3OrdenarLibrosPorAutor(LinkedList*);
 int controller_4ImprimirLibros(LinkedList*, LinkedList*);
 int controller_5ListadoMinotauro(LinkedList*);
 int controller_6Mappeo(LinkedList*);
-int controller_7CuantosCuestan500mas(LinkedList*);
-int controller_8SumatoriaPrecioPearson(LinkedList*);
 
 #endif /* CONTROLLER_PARCIAL2_H_ */

@@ -85,6 +85,7 @@ int LibrosATexto(FILE* pArchivo, LinkedList* listaLibros)
 	float precio;
 	int editorial;
 	exito = 0;
+	//aux = (eLibro*) malloc(sizeof(eLibro));
 	if(pArchivo != NULL && listaLibros != NULL)
 	{
 		len = ll_len(listaLibros);

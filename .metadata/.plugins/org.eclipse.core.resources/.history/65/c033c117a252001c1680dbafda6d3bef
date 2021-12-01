@@ -22,9 +22,7 @@ int controller_MainMenu()
 	printf("| (3) - Ordenar lista de libros por autor.\n");
 	printf("| (4) - Imprimir datos de libros.\n");
 	printf("| (5) - Listado de libros de editorial \"MINOTAURO\".\n");
-	printf("| (6) - Mapeado.\n");
-	printf("| (7) - Imprimir cuantos libros cuestan mas de 500\n");
-	printf("| (8) - Total de precio de los libros de la editorial \"PEARSON\"\n");
+	printf("| (6) - Mapeado.");
 	printf("| (0) - Salir.\n");
 	eleccion = getInt("| Ingrese una opcion: ");
 	return eleccion;
@@ -134,32 +132,4 @@ int controller_6Mappeo(LinkedList* listadoLibros)
 	}
 	fclose(pArchivo);
 	return exito;
-}
-
-int controller_7CuantosCuestan500mas(LinkedList* listaLibros)
-{
-	int cont;
-	if(listaLibros != NULL)
-	{
-		cont = ll_count(listaLibros, LibrosSobre500);
-		if(cont > 0)
-		{
-			printf("La cantidad de libros que cuestan mas de 500 son %d", cont);
-		}
-	}
-	return cont;
-}
-
-int controller_8SumatoriaPrecioPearson(LinkedList* listaLibros)
-{
-	int suma;
-	if(listaLibros != NULL)
-	{
-		suma = ll_count(listaLibros, SumatoriaLibrosPearson);
-		if(suma > 0)
-		{
-			printf("La suma de los precios de los libros de la editorial pearson es de  $%d", suma);
-		}
-	}
-	return suma;
 }

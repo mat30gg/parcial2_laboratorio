@@ -1,8 +1,8 @@
-04:04:08 **** Incremental Build of configuration Debug for project Parcial 2 laboratorio ****
+09:49:25 **** Incremental Build of configuration Debug for project Parcial 2 laboratorio ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller_Parcial2.o" "..\\src\\controller_Parcial2.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2 laboratorio.o" "..\\src\\Parcial 2 laboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller_Parcial2.o" "..\\src\\controller_Parcial2.c" 
 gcc -o "Parcial 2 laboratorio.exe" "src\\LinkedList.o" "src\\Parcial 2 laboratorio.o" "src\\archivos.o" "src\\controller_Parcial2.o" "src\\editorial.o" "src\\input.o" "src\\libro.o" 
 
-04:04:10 Build Finished. 0 errors, 0 warnings. (took 2s.232ms)
+09:49:31 Build Finished. 0 errors, 0 warnings. (took 5s.719ms)
 

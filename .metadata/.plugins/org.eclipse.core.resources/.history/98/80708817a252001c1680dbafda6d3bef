@@ -36,7 +36,4 @@ int ImprimirUnLibro(eLibro*);
 int FiltroMinotauro(void*);
 void FuncionMapeo(void*);
 
-int LibrosSobre500(void*);
-int SumatoriaLibrosPearson(void*);
-
 #endif /* LIBRO_H_ */
