@@ -1,0 +1,18 @@
+/*
+ * controller_Parcial2.h
+ *
+ *  Created on: 30 nov. 2021
+ *      Author: mateo
+ */
+
+#ifndef CONTROLLER_PARCIAL2_H_
+#define CONTROLLER_PARCIAL2_H_
+
+int controller_MainMenu();
+int controller_1LeerArchivoDeLibros();
+int controller_2LeerArchivoDeEditoriales();
+int controller_3OrdenarLibrosPorAutor();
+int controller_4ImprimirLibros();
+int controller_5ListadoMinotauro();
+
+#endif /* CONTROLLER_PARCIAL2_H_ */

@@ -1,0 +1,74 @@
+/*
+ * archivos.c
+ *
+ *  Created on: 30 nov. 2021
+ *      Author: mateo
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "../inc/LinkedList.h"
+#include "archivos.h"
+#include "input.h"
+#include "libro.h"
+#include "editorial.h"
+
+int LibrosDesdeTexto(FILE* pArchivo, LinkedList* listaLibros)
+{
+	int exito;
+	eLibro* aux;
+	char id[8];
+	char titulo[128];
+	char autor[128];
+	char precio[8];
+	char idEditorial[8];
+	exito = 0;
+	if(pArchivo != NULL)
+	{
+		exito = 1;
+		fscanf(pArchivo, "%[^;];%[^;];%[^;];%[^;];%[^\n]\n", id, titulo, autor, precio, idEditorial);
+		while(!feof(pArchivo))
+		{
+			fscanf(pArchivo, "%[^;];%[^;];%[^;];%[^;];%[^\n]\n", id, titulo, autor, precio, idEditorial);
+			aux = NuevoLibroParametros(id, titulo, autor, precio, idEditorial);
+			if(aux != NULL)
+			{
+				if(ll_add(listaLibros, aux) == -1)
+				{
+					exito = 0;
+					break;
+				}
+			}
+		}
+	}
+	return exito;
+}
+
+int EditorialesDesdeTexto(FILE* pArchivo, LinkedList* listaEditoriales)
+{
+	int exito;
+	eEditorial* aux;
+	char id[8];
+	char nombre[64];
+	exito = 0;
+	if(pArchivo != NULL)
+	{
+		exito = 1;
+		fscanf(pArchivo, "%[^;];%[^\n]\n", id, nombre);
+		while(!feof(pArchivo))
+		{
+			fscanf(pArchivo, "%[^;];%[^\n]\n", id, nombre);
+			printf("%s, %s\n", id, nombre);
+			//aux = NuevoEditorialParametros(id, nombre);
+			if(aux != NULL)
+			{
+				if(ll_add(listaEditoriales, aux) == -1)
+				{
+					exito = 0;
+					break;
+				}
+			}
+		}
+	}
+	return exito;
+}

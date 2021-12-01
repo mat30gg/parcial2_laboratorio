@@ -1,0 +1,38 @@
+/*
+ * editorial.c
+ *
+ *  Created on: 30 nov. 2021
+ *      Author: mateo
+ */
+
+#include "editorial.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+eEditorial* nuevoEditorial()
+{
+	eEditorial* pEdito;
+}
+
+int setIdEdito(eEditorial* pEdito, int id)
+{
+	int exito = 0;
+	if(pEdito != NULL)
+	{
+		pEdito->idEditorial = id;
+		exito = 1;
+	}
+}
+int getIdEdito(eEditorial* pEdito, int* id)
+{
+
+}
+int setNombreEdito(eEditorial* pEdito, char* nombre)
+{
+
+}
+int getNombreEdito(eEditorial* pEdito, char* nombre)
+{
+
+}

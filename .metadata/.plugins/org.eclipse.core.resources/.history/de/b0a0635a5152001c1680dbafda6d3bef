@@ -1,0 +1,16 @@
+/*
+ * editorial.h
+ *
+ *  Created on: 30 nov. 2021
+ *      Author: mateo
+ */
+
+#ifndef EDITORIAL_H_
+#define EDITORIAL_H_
+
+typedef struct{
+	int idEditorial;
+	char nombre[64];
+}eEditoral;
+
+#endif /* EDITORIAL_H_ */

@@ -1,0 +1,65 @@
+/*
+ * controller_Parcial2.c
+ *
+ *  Created on: 30 nov. 2021
+ *      Author: mateo
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "archivos.h"
+#include "controller_Parcial2.h"
+#include "../inc/LinkedList.h"
+#include "input.h"
+
+int controller_MainMenu()
+{
+	int eleccion;
+	printf("| (1) - Leer archivo con datos de libros.\n");
+	printf("| (2) - Leer archivo con datos de editoriales.\n");
+	printf("| (3) - Ordenar lista de libros por autor.\n");
+	printf("| (4) - Imprimir datos de libros.\n");
+	printf("| (5) - Listado de libros de editorial \"MINOTAURO\".\n");
+	printf("| (0) - Salir.\n");
+	eleccion = getInt("| Ingrese una opcion: ");
+	return eleccion;
+}
+
+int controller_1LeerArchivoDeLibros(LinkedList* listaLibros)
+{
+	int exito;
+	char nArchivo[64];
+	FILE* pArchivo;
+
+	exito = 0;
+	getString("Ingrese nombre del archivo con datos de libros.", nArchivo);
+	HacerFormatoCSV(nArchivo);
+	printf("%s", nArchivo);
+	pArchivo = fopen(nArchivo, "r");
+	if(pArchivo != NULL)
+	{
+		LibrosDesdeTexto(pArchivo, listaLibros);
+		exito = 1;
+	}
+	return exito;
+}
+
+int controller_2LeerArchivoDeEditoriales()
+{
+
+}
+
+int controller_3OrdenarLibrosPorAutor()
+{
+
+}
+
+int controller_4ImprimirLibros()
+{
+
+}
+
+int controller_5ListadoMinotauro()
+{
+
+}

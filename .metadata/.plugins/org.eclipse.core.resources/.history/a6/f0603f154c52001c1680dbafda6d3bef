@@ -1,0 +1,17 @@
+/*
+ * libro.c
+ *
+ *  Created on: 30 nov. 2021
+ *      Author: mateo
+ */
+
+#include "libro.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+
+eLibro* NuevoLibro()
+{
+	eLibro* plibro;
+	plibro->idLibro = 0;
+}

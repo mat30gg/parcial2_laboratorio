@@ -1,0 +1,92 @@
+/*
+ * editorial.c
+ *
+ *  Created on: 30 nov. 2021
+ *      Author: mateo
+ */
+
+#include "editorial.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+eEditorial* NuevoEditorial()
+{
+	eEditorial* pEdito;
+	pEdito = (eEditorial*) malloc(sizeof(eEditorial));
+	setIdEdito(pEdito, 0);
+	setNombreEdito(pEdito, "");
+	return pEdito;
+}
+
+int setIdEdito(eEditorial* pEdito, int id)
+{
+	int exito = 0;
+	if(pEdito != NULL)
+	{
+		pEdito->idEditorial = id;
+		exito = 1;
+	}
+	return exito;
+}
+int getIdEdito(eEditorial* pEdito, int* id)
+{
+	int exito = 0;
+	if(pEdito != NULL)
+	{
+		*id = pEdito->idEditorial;
+		exito = 1;
+	}
+	return exito;
+}
+int setNombreEdito(eEditorial* pEdito, char* nombre)
+{
+	int exito = 0;
+	if(pEdito != NULL)
+	{
+		strcpy(pEdito->nombre, nombre);
+		exito = 1;
+	}
+	return exito;
+}
+int getNombreEdito(eEditorial* pEdito, char* nombre)
+{
+	int exito = 0;
+	if(pEdito != NULL)
+	{
+		strcpy(nombre, pEdito->nombre);
+		exito = 1;
+	}
+	return exito;
+}
+
+eEditorial* NuevoEditorialParametros(char* id, char* nombre)
+{
+	eEditorial* pEdito;
+
+	int exito = 0;
+	int idEditorial;
+	idEditorial = atoi(id);
+
+	pEdito = NuevoEditorial();
+	if(pEdito != NULL)
+	{
+		if(setIdEdito(pEdito, idEditorial))
+		{
+			if(setNombreEdito(pEdito, nombre))
+			{
+				exito = 1;
+			}
+		}
+	}
+	if(exito == 0)
+	{
+		BorrarEditorial(pEdito);
+	}
+	return pEdito;
+}
+
+void BorrarEditorial(eEditorial* pEdito)
+{
+	free(pEdito);
+}

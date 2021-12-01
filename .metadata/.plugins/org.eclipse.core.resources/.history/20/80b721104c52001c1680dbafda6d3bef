@@ -1,0 +1,19 @@
+/*
+ * libro.h
+ *
+ *  Created on: 30 nov. 2021
+ *      Author: mateo
+ */
+
+#ifndef LIBRO_H_
+#define LIBRO_H_
+
+typedef struct{
+	int idLibro;
+	char titulo[128];
+	char autor[128];
+	float precio;
+	int idEditorial;
+}eLibro;
+
+#endif /* LIBRO_H_ */
