@@ -2725,4 +2725,5 @@
   <categories xmi:id="_Ik7ms1J1EeyFR_AojsUPzw" elementId="org.eclipse.ltk.ui.category.refactoring" name="Refactoring"/>
   <categories xmi:id="_Ik7mtFJ1EeyFR_AojsUPzw" elementId="rpmstubby.commands" name="RPMStubby Commands" description="Commands for the RPM Stubby plugin"/>
   <categories xmi:id="_Ik7mtVJ1EeyFR_AojsUPzw" elementId="org.eclipse.cdt.debug.ui.category.reverseDebugging" name="Reverse Debugging Commands" description="Set of commands for Reverse Debugging"/>
-  <categories xmi:id="_Ik7mtlJ1EeyFR_AojsUPzw" elementId="org.eclipse.cdt.debug.ui.category.tracing" name="Tracing Commands" description="Category for Trac
+  <categories xmi:id="_Ik7mtlJ1EeyFR_AojsUPzw" elementId="org.eclipse.cdt.debug.ui.category.tracing" name="Tracing Commands" description="Category for Tracing Commands"/>
+</application:Application>

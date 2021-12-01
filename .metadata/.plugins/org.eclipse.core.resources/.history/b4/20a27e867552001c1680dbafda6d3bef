@@ -22,7 +22,6 @@ int controller_MainMenu()
 	printf("| (3) - Ordenar lista de libros por autor.\n");
 	printf("| (4) - Imprimir datos de libros.\n");
 	printf("| (5) - Listado de libros de editorial \"MINOTAURO\".\n");
-	printf("| (6) - Mapeado.");
 	printf("| (0) - Salir.\n");
 	eleccion = getInt("| Ingrese una opcion: ");
 	return eleccion;
